@@ -29,7 +29,7 @@
         <div class="navbar-brand">
           <a href="index.html">
             <img
-              src="/images/logo.png"
+              src="./images/logo.png"
               alt="GadgetsGo logo"
               class="logo"
               width="80%"
@@ -132,9 +132,9 @@
       <h2>Pay with:</h2>
   <br>
  
-    <img src="/images/khalti_logo.png" alt="khalti_logo" height="50rem" id="Khalti" style="cursor: pointer;">
-    <img src="/images/stripe_logo.png" alt="stripe_logo" height="50rem" id="Stripe" style="cursor: pointer;">
-    <img src="/images/esewa_logo.png" alt="esewa_logo" height="50rem" id="eSewa" style="cursor: pointer;">
+    <img src="./images/khalti_logo.png" alt="khalti_logo" height="50rem" id="Khalti" style="cursor: pointer;">
+    <img src="./images/stripe_logo.png" alt="stripe_logo" height="50rem" id="Stripe" style="cursor: pointer;">
+    <img src="./images/esewa_logo.png" alt="esewa_logo" height="50rem" id="eSewa" style="cursor: pointer;">
     
   
     </div>
@@ -210,13 +210,15 @@ const payload = {
             // Handle errors (optional)
 
             const errorMessage = await response.text();
-
             console.log('Response Body:', errorMessage);
             messageDiv.textContent = `Error: ${errorMessage}`;
             messageDiv.style.color = 'red'; // Red color for error
         }
     } catch (error) {
         console.error('Error submitting form:', error);
+        messageDiv.textContent = `Error: ${errorMessage}`;
+            messageDiv.style.color = 'red'; // Red color for error
+        
         alert('There was an error submitting the form.');
     }
 };
